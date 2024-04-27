@@ -14,11 +14,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //route
 app.get("/", (req, res) => {
-  res.send("Selamat datang di jagatirta");
+  res.render("index");
 });
-app.get("/halo/:name", (req, res) => {
-  res.render("index", { name: req.params.name });
-});
+// app.get("/halo/:name", (req, res) => {
+//   res.render("index", { name: req.params.name });
+// });
 app.get("/login", (req, res) => {
   res.send("login page ....");
 });

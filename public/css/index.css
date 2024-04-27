@@ -1,0 +1,140 @@
+:root {
+  --heading-font: "Sansita", sans-serif;
+  --body-font: "PT Sans", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  background-color: aliceblue;
+}
+.hero {
+  color: aliceblue;
+  width: 100vw;
+  min-height: 90vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.342) 55%,
+      rgb(0, 0, 0)
+    ),
+    url("/img/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero .content {
+  margin: 0 auto;
+  padding: 70px;
+  width: 50%;
+  /* text-align: center; */
+}
+.hero h1 {
+  font-family: var(--heading-font);
+  font-size: 90px;
+  text-align: center;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
+}
+.hero p {
+  display: block;
+  margin: 30px auto;
+  font-family: var(--body-font);
+  font-size: 15px;
+  width: 70%;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+}
+.hero button {
+  display: block;
+  margin: 30px auto;
+  padding: 20px 40px;
+  background: rgb(62, 53, 190);
+  color: aliceblue;
+}
+
+.about {
+  display: flex;
+  margin: 30px 30px 30px 0;
+}
+.about .left {
+  width: 60%;
+  padding-top: 80px;
+  padding-left: 50px;
+}
+.about h2 {
+  font-family: var(--heading-font);
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.about p {
+  width: 60%;
+  margin-top: 30px;
+  font-family: var(--body-font);
+}
+.about .line {
+  width: 20%;
+  margin: 10px 0;
+  height: 5px;
+  background: rgb(62, 53, 190);
+}
+.about span {
+  margin-left: 5px;
+}
+.about button {
+  margin: 30px 0;
+  padding: 20px 40px;
+  color: aliceblue;
+  background: rgb(62, 53, 190);
+}
+.about .right {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+.about .right img {
+  object-fit: cover;
+  height: 500px;
+}
+.about .right img.big {
+  width: 70%;
+  object-position: center;
+}
+.about .right img.med {
+  left: -55px;
+  position: absolute;
+  border: 10px solid aliceblue;
+  width: 50%;
+  height: 70%;
+}
+
+.mission {
+  width: 100vw;
+  display: flex;
+}
+.mission .left {
+  width: 50%;
+  padding-left: 50px;
+}
+.mission h2 {
+  font-family: var(--heading-font);
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.mission p {
+  width: 60%;
+  margin-top: 30px;
+  font-family: var(--body-font);
+}
+.mission img {
+  width: 60%;
+  height: 400px;
+  object-fit: cover;
+}
+.mission .right {
+  width: 50%;
+}
