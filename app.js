@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 //   res.render("index", { name: req.params.name });
 // });
 app.get("/login", (req, res) => {
-  res.send("login page ....");
+  res.render("login");
 });
 app.get("/blog", (req, res) => {
   res.send("blog page ....");
