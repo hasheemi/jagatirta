@@ -37,6 +37,8 @@ body {
 }
 .hero h1 {
   font-family: var(--heading-font);
+  font-weight: 800;
+  font-style: italic;
   font-size: 90px;
   text-align: center;
   text-transform: capitalize;
@@ -275,7 +277,7 @@ h2 {
   width: 65%;
 }
 footer {
-  background-color: rgb(7, 4, 54);
+  background-color: rgb(3, 1, 20);
   color: aliceblue;
   display: flex;
   padding: 50px 30px;

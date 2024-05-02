@@ -25,8 +25,8 @@ app.get("/login", (req, res) => {
 app.get("/blog", (req, res) => {
   res.send("blog page ....");
 });
-app.get("/search", (req, res) => {
-  res.send("search page ....");
+app.get("/maps", (req, res) => {
+  res.render("maps");
 });
 
 //start
