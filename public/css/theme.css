@@ -1,0 +1,18 @@
+:root {
+  --heading-font: "Sansita", sans-serif;
+  --body-font: "PT Sans", sans-serif;
+  --white: aliceblue;
+  --blue: rgb(62, 53, 190);
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: aliceblue;
+}
