@@ -138,8 +138,7 @@ button {
   text-transform: capitalize;
   font-family: var(--body-font);
 
-  box-shadow: 2px 2px 5px rgba(83, 82, 82, 0.603),
-    -2px -2px 5px rgba(83, 82, 82, 0.603);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .mission .toast {
   display: flex;
@@ -267,6 +266,7 @@ h2 {
 }
 .blog .right img {
   width: 30%;
+  object-fit: cover;
 }
 .blog .right p {
   width: 100%;
@@ -311,4 +311,98 @@ footer i {
   font-size: 30px;
   margin-top: 10px;
   margin-right: 10px;
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .hero {
+    min-height: 80vh;
+  }
+  .hero h1 {
+    font-size: min(80px, 10vw);
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: min(15px, 2vw);
+  }
+  .about .left {
+    padding-top: 20px;
+  }
+  .about p {
+    width: 90%;
+    font-size: 13px;
+  }
+  .about .list {
+    font-size: 14px;
+    margin-top: 10px;
+    width: 80%;
+  }
+  .about .right {
+    padding-top: 20px;
+    align-items: center;
+  }
+  .about .right img.big {
+    display: none;
+  }
+  .about .right img.med {
+    width: 100%;
+    height: 80%;
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero {
+    min-height: 80vh;
+    /* height: 70vh; */
+  }
+  .hero h1 {
+    font-size: 10vw;
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: max(13px, 2vw);
+    margin-top: 30px;
+  }
+  .hero button {
+    margin-top: 50px;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about .right,
+  .about .left {
+    position: static;
+    width: 90vw;
+    padding-left: 30px;
+  }
+  .about .left {
+    padding-top: 25px;
+  }
+  .about .right {
+    width: 100vw;
+    padding-left: 0;
+  }
+  .about h2 {
+    font-size: 8vw;
+  }
+  .about p {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .about button {
+    padding: 20px 25px;
+  }
+  .about .right img.big {
+    width: 90%;
+    height: 250px;
+    margin: 5px auto;
+  }
+  .about .right img.med {
+    display: none;
+  }
 }
