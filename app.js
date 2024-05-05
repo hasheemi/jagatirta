@@ -47,7 +47,7 @@ app.get("/auth/google", (req, res) => {
 });
 app.get("/auth/google/callback", async (req, res) => {
   const { code } = req.query;
-  const { tokens } = await authClient.getToken(code);
+  const { tokens } = authClient.getToken(code);
   authClient.setCredentials(tokens);
   const oauth2 = google.oauth2({
     auth: authClient,

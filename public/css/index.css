@@ -252,7 +252,7 @@ h2 {
   text-transform: capitalize;
   font-family: var(--heading-font);
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .blog .left p {
   width: 100%;
@@ -262,6 +262,9 @@ h2 {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 50px;
+}
+.blog .right h4 {
+  font-size: 20px;
 }
 .blog .right img {
   width: 30%;
@@ -289,10 +292,10 @@ footer div {
 }
 footer h4 {
   margin-bottom: 10px;
+  font-size: 20px;
 }
-footer h6 {
-  margin-top: 20px;
-  font-size: 15px;
+footer p {
+  font-size: 13px;
 }
 footer ul {
   margin-top: 20px;
@@ -325,6 +328,7 @@ footer i {
   .hero p {
     font-size: 13px;
   }
+
   .about .left {
     padding-top: 20px;
   }
@@ -379,11 +383,43 @@ footer i {
     font-size: 12px;
   }
   .destination .container {
-    width: calc(100vw - 30px);
+    width: calc(100vw - 50px);
     scrollbar-width: unset;
   }
   .destination .container .card {
     width: 35%;
+  }
+  .blog {
+    padding: 0 50px;
+    margin-top: 10px;
+    width: calc(100vw - 50px);
+  }
+  .blog h2 {
+    font-size: 40px;
+  }
+  .blog p {
+    width: 80%;
+    font-size: 13px;
+  }
+  .blog .container {
+    flex-direction: column;
+  }
+  .blog .left,
+  .blog .right {
+    width: calc(90vw - 50px);
+  }
+  .blog .left .post {
+    width: calc(90vw - 50px);
+  }
+  .blog .left .post img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .blog .right .post {
+    width: calc(90vw - 50px);
+  }
+  .blog .right .post p {
+    font-size: 12px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -513,5 +549,39 @@ footer i {
   }
   .blog .right .post {
     width: 90vw;
+  }
+  .blog .right .post p {
+    font-size: 12px;
+  }
+  footer {
+    flex-wrap: wrap;
+    padding-bottom: 10px !important ;
+  }
+  footer .menu,
+  footer .desc {
+    width: 40%;
+  }
+  footer .medsos {
+    width: 100%;
+  }
+  footer p {
+    font-size: 11px;
+  }
+  footer .medsos h4 {
+    display: none;
+  }
+  footer .icon {
+    margin: 5px auto;
+    margin-bottom: 0 !important;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  footer .icon i {
+    margin: 1px 25px;
+  }
+  footer span {
+    font-size: 12px;
+    text-align: justify;
   }
 }

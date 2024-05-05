@@ -25,6 +25,8 @@ h6 {
   font-family: var(--heading-font);
   text-transform: capitalize;
 }
-p {
+p,
+ul,
+li {
   font-family: var(--body-font);
 }
