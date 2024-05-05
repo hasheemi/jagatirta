@@ -33,14 +33,11 @@ const authUrl = authClient.generateAuthUrl({
 app.get("/", (req, res) => {
   res.render("index");
 });
-// app.get("/halo/:name", (req, res) => {
-//   res.render("index", { name: req.params.name });
-// });
 app.get("/login", (req, res) => {
   res.render("login");
 });
 app.get("/blog", (req, res) => {
-  res.send("blog page ....");
+  res.render("blog");
 });
 app.get("/maps", (req, res) => {
   res.render("maps");
@@ -58,6 +55,10 @@ app.get("/auth/google/callback", async (req, res) => {
   });
   const { data } = await oauth2.userinfo.get();
   res.json({ data });
+});
+app.get("/auth/google/logout", (req, res) => {
+  authClient.revokeCredentials();
+  res.redirect("/");
 });
 //start
 app.listen(port, () => {
