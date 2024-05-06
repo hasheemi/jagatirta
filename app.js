@@ -55,7 +55,7 @@ app.get("/blog", (req, res) => {
 });
 app.get("/dashboard", (req, res) => {
   if (req.session.isLogin == true) {
-    res.render("dashboard");
+    res.render("dashboard", { name: req.session.name });
   } else {
     res.redirect("/login");
   }
@@ -80,6 +80,7 @@ app.get("/auth/google/callback", async (req, res) => {
     function (err, resu, field) {
       if (err.errno == 1062 || !err) {
         req.session.isLogin = true;
+        req.session.name = data.given_name;
         res.redirect("/dashboard");
       } else {
         res.status(500).send("errrooror");
