@@ -30,3 +30,9 @@ ul,
 li {
   font-family: var(--body-font);
 }
+button {
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+}

@@ -71,11 +71,11 @@ button {
   object-fit: cover;
 }
 .head .right {
-  width: 30%0;
+  width: 30%;
 }
 .head h3 {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .head ul {
   list-style: none;
@@ -83,9 +83,10 @@ button {
   font-family: var(--body-font);
 }
 .head li {
-  padding: 20px 40px;
+  padding: 10px 30px;
   margin: 10px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 50%;
 }
 .main {
   width: calc(100vw - 50px);
@@ -114,3 +115,67 @@ button {
   margin: 20px 0;
 }
 /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; */
+@media only screen and (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+    /* height: 70vh; */
+  }
+  .hero h1 {
+    font-size: 10vw;
+    width: 60%;
+    margin: 20px auto;
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: max(13px, 2vw);
+    margin-top: 30px;
+  }
+  .hero button {
+    margin-top: 50px;
+  }
+  .head {
+    width: calc(100vw - 30px);
+    padding-left: 30px;
+  }
+  .head .post img {
+    height: 200px;
+  }
+  .head .post h4 {
+    font-size: 20px;
+  }
+  .head .post p {
+    font-size: 12px;
+    width: 90%;
+  }
+  .head .right {
+    width: 40%;
+  }
+  .head ul {
+    margin: 0;
+  }
+  .head li {
+    /* margin: 0; */
+    padding: 5px 10px;
+    font-size: 15px;
+    width: 70%;
+    /* scale: 0.8; */
+  }
+  .main {
+    width: calc(100vw - 30px);
+    padding-left: 30px;
+    justify-content: space-between;
+  }
+  .main .post {
+    width: 40%;
+  }
+  .main .post h4 {
+    font-size: 16px;
+  }
+  .main .post p {
+    font-size: 11px;
+    width: 90%;
+  }
+}

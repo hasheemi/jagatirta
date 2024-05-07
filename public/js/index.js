@@ -1,4 +1,5 @@
 const postDiv = document.querySelector(".container");
+console.log(postDiv.scrollWidth);
 let scrollDirection = 1; // 1 untuk scroll ke kanan, -1 untuk scroll ke kiri
 
 // Fungsi untuk melakukan scroll
@@ -19,10 +20,10 @@ function scrollPost() {
   }
   // Scroll ke kanan atau ke kiri sesuai dengan arah yang ditentukan
   postDiv.scrollTo({
-    left: postDiv.scrollLeft + 100 * scrollDirection, // 150px per scroll
+    left: postDiv.scrollLeft + 200 * scrollDirection, // 150px per scroll
     behavior: "smooth", // Efek scroll yang halus
   });
 }
 
 // Membuat interval untuk melakukan scroll otomatis
-setInterval(scrollPost, 3000); // Ganti angka 3000 dengan jumlah milidetik yang diinginkan untuk kecepatan scroll
+setInterval(scrollPost, 2000); // Ganti angka 3000 dengan jumlah milidetik yang diinginkan untuk kecepatan scroll
