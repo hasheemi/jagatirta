@@ -1,0 +1,65 @@
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(1, 1, 1, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar.scrolled {
+  background-color: rgba(1, 1, 1, 1);
+}
+
+.navbar .navbar-logo {
+  padding-left: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  font-family: var(--heading-font);
+}
+.navbar .navbar-nav {
+  margin-left: 40vw;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.navbar .navbar-nav a {
+  color: var(--white);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--blue);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--blue);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: var(--white);
+  margin: 0 0.5rem;
+}
+
+#menu {
+  display: none;
+}

@@ -1,3 +1,6 @@
+html {
+  overflow: hidden !important;
+}
 .container {
   width: 100vw;
   height: 100vh;
@@ -12,14 +15,17 @@
 }
 .open .panel {
   width: 30%;
-  padding: 5px;
+  padding: 10px;
   transition: ease 0.5s;
+  /* display: block; */
 }
 .panel {
   width: 0;
   height: 100%;
+  /* display: none; */
   transition: ease 0.5s;
   position: relative;
+  overflow-y: scroll;
 }
 .panel img {
   width: 100%;
@@ -36,6 +42,10 @@
   font-family: var(--body-font);
   font-size: 13px;
   width: 80%;
+  display: none;
+}
+.open .panel p {
+  display: block;
 }
 .panel .close {
   position: absolute;
@@ -50,4 +60,23 @@
   align-items: center;
   background-color: var(--white);
   padding: 3px;
+}
+.panel .desc {
+  font-family: var(--body-font);
+}
+.panel p {
+  margin: 20px 0;
+}
+.panel .list div {
+  margin: 10px 0;
+}
+.panel .list i {
+  margin-right: 5px;
+}
+button {
+  margin-top: 30px;
+  padding: 20px 40px;
+  background: rgb(62, 53, 190);
+  color: aliceblue;
+  margin-bottom: 20px;
 }

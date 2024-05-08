@@ -89,7 +89,9 @@ app.get("/auth/google/callback", async (req, res) => {
   );
 });
 app.get("/auth/google/logout", (req, res) => {
-  authClient.revokeCredentials();
+  if (authClient.credentials.access_token !== undefined) {
+    authClient.revokeCredentials();
+  }
   req.session.destroy();
   res.redirect("/");
 });
