@@ -5,10 +5,18 @@ const session = require("express-session");
 const path = require("path");
 require("dotenv").config();
 const { google } = require("googleapis");
+const cors = require("cors");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 const port = 3012;
 
 const db = require("./helpers/db");
+const proxy = createProxyMiddleware({
+  router: (req) => new URL(req.path.substring(7)),
+  pathRewrite: (path, req) => new URL(req.path.substring(7)).pathname,
+  changeOrigin: true,
+  logger: console,
+});
 //use
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -101,6 +109,9 @@ app.get("/auth/google/logout", (req, res) => {
   }
   req.session.destroy();
   res.redirect("/");
+});
+app.get("/proxy/*", proxy, (req, res) => {
+  res.send("hello");
 });
 //start
 app.listen(port, () => {
