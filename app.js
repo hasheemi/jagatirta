@@ -60,6 +60,13 @@ app.get("/dashboard", (req, res) => {
     res.redirect("/login");
   }
 });
+app.get("/dashboard/add", (req, res) => {
+  if (req.session.isLogin == true) {
+    res.render("dashboard-add", { name: req.session.name });
+  } else {
+    res.redirect("/login");
+  }
+});
 app.get("/maps", (req, res) => {
   res.render("maps");
 });
