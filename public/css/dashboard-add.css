@@ -125,6 +125,7 @@ textarea#main {
     min-height: 60vh;
   }
   .hero h1 {
+    padding-top: 60px;
     font-size: min(80px, 10vw);
   }
   .hero .content {

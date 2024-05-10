@@ -79,7 +79,6 @@ app.get("/maps", async (req, res) => {
     if (err) {
       res.redirect("/");
     } else {
-      console.log(resu);
       res.render("maps", { place: resu });
     }
   });

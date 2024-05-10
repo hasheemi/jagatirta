@@ -7,6 +7,7 @@ let container = document.querySelector(".container");
 let judul = document.querySelector(".desc h3");
 let img = document.querySelector(".panel img");
 let link = document.querySelector(".panel a");
+let closer = document.querySelector(".close");
 const zoom = 10;
 let holder = document.querySelectorAll("p.hidden");
 
@@ -30,6 +31,9 @@ holder.forEach((e) => {
     })
     .addTo(map);
 });
+closer.onclick = () => {
+  container.classList.remove("open");
+};
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
