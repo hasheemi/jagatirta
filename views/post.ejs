@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&family=Sansita:ital,wght@0,400;0,700;0,800;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/post.css" />
+    <link rel="stylesheet" href="/css/theme.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="hidden" id="url" value="<%= data[0].isi %>" />
+    <div class="hero">
+      <div class="content">
+        <h1>Artikel lingkungan</h1>
+        <p>
+          Temukan berita terupdate apa saja yang terjadi di Indonesia terkait
+          lingkungan hidup dan tambah wawasan anda mengenai inovasi di bidang
+          teknologi bagi lingkungan
+        </p>
+        <button>mulai membaca</button>
+      </div>
+    </div>
+    <div class="main">
+      <p></p>
+    </div>
+    <script>
+      window.onload = async () => {
+        let url = document.querySelector("input#url").value;
+        let main = document.querySelector(".main");
+        let req = await fetch(url);
+        let res = await req.text();
+        let full = res.split("\n");
+        full.forEach((e) => {
+          main.innerHTML += `<p>${e}</p>`;
+        });
+      };
+    </script>
+  </body>
+</html>

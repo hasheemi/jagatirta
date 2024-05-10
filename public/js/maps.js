@@ -5,18 +5,24 @@
 // magnification with which the map will start -6.905977, 107.613144.
 let container = document.querySelector(".container");
 const zoom = 10;
+let holder = document.querySelectorAll("p.hidden");
+
 // co-ordinates
 const co = [-7.8478713, 113.0161214];
 
 // calling map
 const map = L.map("maps").setView(co, zoom);
-var marker = L.marker(co)
-  .on("click", () => {
-    console.log("hei");
-    container.classList.add("open");
+holder.forEach((e) => {
+  let koor = e.innerHTML.split(",");
+  var marker = L.marker([koor[0], koor[1]], {
+    id: koor[2],
   })
-  .addTo(map);
-
+    .on("click", (e) => {
+      console.log(e.target.options.id);
+      container.classList.add("open");
+    })
+    .addTo(map);
+});
 // Used to load and display tile layers on the map
 // Most tile servers require attribution, which you can set under `Layer`
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {

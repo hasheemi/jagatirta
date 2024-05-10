@@ -30,12 +30,16 @@
     <title>Maps</title>
   </head>
   <body>
+    <% place.forEach(e => { %>
+    <p class="hidden"><%= e.koordinat %>,<%= e.id %></p>
+    <% }) %>
     <div class="container">
       <div class="panel">
         <div class="close"><i class="bi bi-x-lg"></i></div>
         <img src="/img/pantai-klayar.jpg" alt="pantai klayar" />
-        <h3>air terjun madakaripura</h3>
+
         <div class="desc">
+          <h3>air terjun madakaripura</h3>
           <div>
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
             ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i

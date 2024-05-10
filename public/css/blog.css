@@ -116,6 +116,9 @@ button {
   width: 70%;
   margin: 20px 0;
 }
+.main a {
+  color: rgb(0, 0, 0);
+}
 /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; */
 @media only screen and (max-width: 600px) {
   .hero {
@@ -173,11 +176,14 @@ button {
   .main .post {
     width: 40%;
   }
+  .main .post img {
+    height: 150px;
+  }
   .main .post h4 {
     font-size: 16px;
   }
   .main .post p {
-    font-size: 11px;
-    width: 90%;
+    font-size: 10px;
+    width: 95%;
   }
 }

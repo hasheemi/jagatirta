@@ -1,0 +1,70 @@
+footer {
+  background-color: rgb(3, 1, 20);
+  color: aliceblue;
+  display: flex;
+  padding: 50px 30px;
+  justify-content: space-evenly;
+}
+footer div {
+  width: 30%;
+  padding: 10px;
+  margin: 5px;
+}
+footer h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+footer p {
+  font-size: 13px;
+}
+footer ul {
+  margin-top: 20px;
+}
+footer li {
+  list-style: none;
+  margin-top: 10px;
+}
+footer .icon {
+  width: 90%;
+  margin: 10px 0;
+  padding: 0;
+}
+footer i {
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-wrap: wrap;
+    padding-bottom: 10px !important ;
+  }
+  footer .menu,
+  footer .desc {
+    width: 40%;
+  }
+  footer .medsos {
+    width: 100%;
+  }
+  footer p {
+    font-size: 11px;
+  }
+  footer .medsos h4 {
+    display: none;
+  }
+  footer .icon {
+    margin: 5px auto;
+    margin-bottom: 0 !important;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  footer .icon i {
+    margin: 1px 25px;
+  }
+  footer span {
+    font-size: 12px;
+    text-align: justify;
+  }
+}

@@ -21,7 +21,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label {
   font-family: var(--heading-font);
   text-transform: capitalize;
 }

@@ -30,55 +30,63 @@
     </div>
     <div class="main">
       <h2>tambah data sumber air</h2>
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action="/add/place" method="POST" enctype="multipart/form-data">
         <div class="file-zone">
           <p class="uplace">Drop file here or click to upload</p>
-          <input
-          type="file"
-          name="photo"
-          id="photo"
-        />
+          <input type="file" name="photo" id="photo" />
         </div>
-       
+
         <label for="title">Nama tempat</label>
-        <input type="text" id="title" name="title" />
+        <input type="text" id="title" name="title" required />
+        <input type="hidden" name="slug" id="slug" />
+        <input type="hidden" name="date" value="<%= new Date().getTime(); %>" />
+        <input type="hidden" name="email" value="<%= email %>" />
+        <input type="hidden" name="username" value="<%= name %>" />
+        <label>lokasi tempat</label>
         <div class="row">
           <div class="provinsi">
             <label for="provinsi">Provinsi</label>
-            <select id="provinsi" name="provinsi">
-            
-            </select>
+            <select id="provinsi" name="provinsi" required></select>
           </div>
           <div class="kabupaten">
-            <label for="kabupaten">Provinsi</label>
-            <select id="kabupaten" name="kabupaten">
-             
-            </select>
+            <label for="kabupaten">kabupaten</label>
+            <select id="kabupaten" name="kabupaten" required></select>
           </div>
         </div>
+        <label>kondisi tempat</label>
         <div class="row">
           <div class="fungsi">
-            <label for="fungsi">Provinsi</label>
-            <select id="fungsi" name="fungsi">
-              <option value="1">aceh</option>
-              <option value="2">jteam</option>
+            <label for="fungsi">jenis tempat</label>
+            <select id="fungsi" name="fungsi" required>
+              <option value="1">sungai</option>
+              <option value="2">danau</option>
+              <option value="3">telaga</option>
+              <option value="4">air terjun</option>
+              <option value="5">pantai</option>
+              <option value="6">kali</option>
+              <option value="7">irigasi</option>
             </select>
           </div>
           <div class="lingkungan">
-            <label for="lingkungan">Provinsi</label>
-            <select id="lingkungan" name="lingkungan">
-              <option value="1">aceh</option>
-              <option value="2">jteam</option>
+            <label for="lingkungan">kebersihan</label>
+            <select id="lingkungan" name="lingkungan" required>
+              <option value="1">semua bersih</option>
+              <option value="2">hanya air yang bersih</option>
+              <option value="3">tercemar sampah</option>
+              <option value="4">tercemar limbah pabrik</option>
             </select>
           </div>
         </div>
         <label for="deskripsi">deskripsi singkat</label>
-        <textarea name="deskripsi" id="deskripsi""></textarea>
+        <textarea name="deskripsi" id="deskripsi"></textarea>
         <label for="notel">Nomor telepon</label>
-        <input type="number" id="notel" name="notel" />
-       <button type="submit">tambah</button>
+        <input type="text" id="notel" name="notel" />
+        <label for="link">link google maps</label>
+        <input type="text" id="link" name="link" required />
+        <button type="submit">tambah</button>
       </form>
     </div>
+    <script src="/js/slug.js"></script>
     <script src="/js/select.js"></script>
     <script src="/js/drag.js"></script>
   </body>

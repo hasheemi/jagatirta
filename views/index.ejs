@@ -16,21 +16,11 @@
     <link rel="stylesheet" href="/css/theme.css" />
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/navbar.css" />
-    <title>Express.js Example</title>
+    <link rel="stylesheet" href="/css/footer.css" />
+    <title>Jagatirta</title>
   </head>
   <body>
-    <nav class="navbar">
-      <a href="#" class="navbar-logo">Asrob<span>coffee</span></a>
-      <div class="navbar-nav">
-        <a href="#about">Tentang</a>
-        <a href="#product">Produk</a>
-        <a href="#shop">Cafe</a>
-        <a href="#contact">Kontak</a>
-      </div>
-      <div class="navbar-extra">
-        <a id="menu"><i class="bi bi-list"></i></a>
-      </div>
-    </nav>
+    <%- include('components/navbar') %>
     <div class="hero">
       <div class="content">
         <h1>
@@ -178,36 +168,8 @@
         </div>
       </div>
     </section>
-    <footer>
-      <div class="desc">
-        <h4>jagatirta</h4>
-        <p>
-          sebuah platform sistem informasi yang memberikan data mengenai
-          kerusakan lingkungan terutama perairan agar kedepannya banyak orang
-          yan akhirnya peduli terhadap air yang setiap hari menjadi kebutuhan
-          utama setiap manusia
-        </p>
-      </div>
-      <div class="menu">
-        <h4>menu</h4>
-        <ul>
-          <li>beranda</li>
-          <li>tentang</li>
-          <li>produk</li>
-          <li>testimoni</li>
-          <li>blog</li>
-        </ul>
-      </div>
-      <div class="medsos">
-        <h4>media sosial</h4>
-        <div class="icon">
-          <i class="bi bi-whatsapp"></i>
-          <i class="bi bi-instagram"></i>
-          <i class="bi bi-facebook"></i>
-        </div>
-      </div>
-    </footer>
-
+    <%- include('components/footer') %>
+    <script src="/js/navbar.js"></script>
     <script src="/js/index.js"></script>
   </body>
 </html>
