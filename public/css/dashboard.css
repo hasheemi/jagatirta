@@ -78,3 +78,57 @@ button {
   font-size: 25px;
   text-align: center;
 }
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: min(80px, 10vw);
+    padding-top: 60px;
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: 13px;
+  }
+  .container {
+    width: 80vw;
+  }
+  .container .box {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: 60vh;
+    /* height: 70vh; */
+  }
+  .hero h1 {
+    padding-top: 100px;
+    font-size: 10vw;
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: max(13px, 2vw);
+    margin-top: 30px;
+  }
+  .hero button {
+    margin-top: 50px;
+  }
+  .container {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .box {
+    width: 80%;
+    height: 200px;
+    margin: 30px 0;
+    flex-shrink: 0;
+  }
+}

@@ -120,12 +120,13 @@ button {
   color: rgb(0, 0, 0);
 }
 /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   .hero {
     min-height: 70vh;
     /* height: 70vh; */
   }
   .hero h1 {
+    padding-top: 60px;
     font-size: 10vw;
     width: 60%;
     margin: 20px auto;
@@ -146,7 +147,7 @@ button {
     padding-left: 30px;
   }
   .head .post img {
-    height: 200px;
+    height: 30vh;
   }
   .head .post h4 {
     font-size: 20px;

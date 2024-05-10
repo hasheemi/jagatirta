@@ -4,6 +4,9 @@
 // };
 // magnification with which the map will start -6.905977, 107.613144.
 let container = document.querySelector(".container");
+let judul = document.querySelector(".desc h3");
+let img = document.querySelector(".panel img");
+let link = document.querySelector(".panel a");
 const zoom = 10;
 let holder = document.querySelectorAll("p.hidden");
 
@@ -17,8 +20,12 @@ holder.forEach((e) => {
   var marker = L.marker([koor[0], koor[1]], {
     id: koor[2],
   })
-    .on("click", (e) => {
-      console.log(e.target.options.id);
+    .on("click", async (e) => {
+      let req = await fetch(`/maps/place/${e.target.options.id}`);
+      let res = await req.json();
+      judul.innerHTML = res[0].nama;
+      img.setAttribute("src", res[0].img);
+      link.setAttribute("href", res[0].link);
       container.classList.add("open");
     })
     .addTo(map);

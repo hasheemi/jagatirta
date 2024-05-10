@@ -119,3 +119,40 @@ select#category {
 textarea#main {
   height: 400px;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: min(80px, 10vw);
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: 60vh;
+    /* height: 70vh; */
+  }
+  .hero h1 {
+    padding-top: 60px;
+    font-size: 10vw;
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: max(13px, 2vw);
+    margin-top: 30px;
+  }
+  .hero button {
+    margin-top: 50px;
+  }
+}

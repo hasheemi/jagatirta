@@ -1,7 +1,7 @@
 .hero {
   color: aliceblue;
   width: 100vw;
-  min-height: 90vh;
+  min-height: 60vh;
   background-image: linear-gradient(
       to bottom,
       rgb(0, 0, 0),
@@ -22,17 +22,68 @@
   font-family: var(--heading-font);
   font-weight: 800;
   font-style: italic;
-  font-size: 90px;
+  font-size: 60px;
   text-align: center;
   text-transform: capitalize;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.493);
 }
-.hero p {
+
+button {
+  padding: 20px 40px;
+  background: rgb(62, 53, 190);
+  color: aliceblue;
+}
+.hero button {
   display: block;
   margin: 30px auto;
-  font-family: var(--body-font);
-  font-size: 15px;
-  width: 70%;
-  text-align: center;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.411);
+}
+.main {
+  width: 80vw;
+  margin: 50px auto;
+}
+.main p {
+  margin: 10px auto;
+  width: 80%;
+  text-indent: 30px;
+}
+.main img {
+  height: 400px;
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+  object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    min-height: 70vh;
+    /* height: 70vh; */
+  }
+  .hero h1 {
+    padding-top: 60px;
+    font-size: 30px;
+    width: 60%;
+    margin: 20px auto;
+  }
+  .hero .content {
+    width: 90%;
+    padding: 20px;
+  }
+  .hero p {
+    font-size: max(13px, 2vw);
+    margin-top: 30px;
+  }
+  .hero button {
+    margin-top: 50px;
+  }
+  .main {
+    width: 95vw;
+  }
+  .main p {
+    width: 90%;
+  }
+  .main img {
+    width: 90%;
+    height: 40vh;
+    object-position: bottom;
+  }
 }

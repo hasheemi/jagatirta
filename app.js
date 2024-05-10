@@ -96,6 +96,18 @@ app.get("/blog/post/:slug&:id", async (req, res) => {
     }
   );
 });
+app.get("/maps/place/:id", async (req, res) => {
+  await db.query(
+    `SELECT * FROM place WHERE id = ${req.params.id}`,
+    (err, resu, field) => {
+      if (err || resu.length == 0) {
+        res.redirect("/");
+      } else {
+        res.json(resu);
+      }
+    }
+  );
+});
 app.get("/dashboard", (req, res) => {
   if (req.session.isLogin == true) {
     res.render("dashboard", { name: req.session.name });

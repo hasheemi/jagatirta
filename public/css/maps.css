@@ -80,6 +80,12 @@ button {
   color: aliceblue;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .open .maps,
+  .open .panel {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 600px) {
   html {
     overflow-y: hidden;
